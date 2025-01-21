@@ -25,20 +25,24 @@ export function BookDetails() {
     // console.log(book);
     
     
-    const { title, price } = book
+    const { title, listPrice, pageCount, description, thumbnail } = book
+    // console.log(thumbnail);
+    
+    let Difficulity 
+    if(pageCount > 500) Difficulity = 'Serious Reading'
+    else if(pageCount > 200) Difficulity = 'Decent Reading'
+    else Difficulity = 'Light Reading'
+
+    console.log(Difficulity);
+
+
     return (
         <section className="book-details">
             <h1>Title: {title}</h1>
-            <h2>Price: {price}</h2>
-            <p>Lorem ipsum dolor,
-                sit amet consectetur adipisicing
-                elit. Illum, ex voluptatem? Commodi velit
-                , iure exercitationem nisi facilis repellat
-                tempora dicta id perferendis aliquid
-                alias quisquam facere obcaecati
-                nam error cum?
-            </p>
-            <img src="/BooksImages/1.jpg" alt="" />
+            <h2>Price: {listPrice.amount} {listPrice.currencyCode}</h2>
+            <h3>Difficulty: {Difficulity}</h3>
+            <p>Description: {description}</p>
+            <img src={thumbnail} alt={`${title} thumbnail`} />
             <button>
                 <Link to="/books">Back</Link>
                 </button>
