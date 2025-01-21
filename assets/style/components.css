@@ -52,11 +52,48 @@ body{
     transform: translateY(-2px); 
 }
 
+.book-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-filter h2{
+    display: block;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+}
+
+.input-filter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.input-filter input{
+    border: none;
+    border-radius: 5px;
+    padding: 0.3em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: scale 0.3s ease;
+}
+
+/* .input-filter input:hover{
+    scale: 1.1;
+} */
+
+.input-filter input:focus{
+    scale: 1.1;
+}
+
 .book-list{
     list-style-type: none; 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 16px; 
+    gap: 3em; 
     border-radius: 8px;
     padding: 16px; 
     background-color: transparent;
@@ -73,4 +110,27 @@ body{
 
 .book-container:hover {
     transform: translateY(-4px); 
+}
+
+.book-btns{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.book-container button{
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.4em;
+    background-color: #4a90e2;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.book-container a{
+    text-decoration: none;
+    color: white;
 }

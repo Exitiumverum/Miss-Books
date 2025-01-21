@@ -33,7 +33,7 @@ export function BookFilter({ filterBy, onSetFilter }) {
     return (
         <section className="book-filter">
             <h2>Filter</h2>
-            <form>
+            <form className="input-filter">
                 <label htmlFor="txt">Title</label>
                 <input onChange={handleChange} value={txt} type="text" name="txt" id="txt" />
 
