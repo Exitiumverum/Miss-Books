@@ -18,10 +18,10 @@ function query(filterBy = {}) {
         .then(books => {
             if (filterBy.txt) {
                 const regExp = new RegExp(filterBy.txt, 'i')
-                books = books.filter(book => regExp.test(book.vendor))
+                books = books.filter(book => regExp.test(book.title))
             }
-            if (filterBy.minSpeed) {
-                books = books.filter(book => book.speed >= filterBy.minSpeed)
+            if (filterBy.maxPrice) {
+                books = books.filter(book => book.price <= filterBy.maxPrice)
             }
             return books
         })

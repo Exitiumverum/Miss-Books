@@ -15,9 +15,9 @@ export function App() {
                 <AppHeader />
                 <main className="main-layout">
                     <Routes>
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/about" element={<About/>} />
-                    <Route path="/books" element={<BookIndex/>} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/books" element={<BookIndex />} />
                     </Routes>
                 </main>
             </section>
