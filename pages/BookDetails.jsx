@@ -33,13 +33,18 @@ export function BookDetails() {
     else if(pageCount > 200) Difficulity = 'Decent Reading'
     else Difficulity = 'Light Reading'
 
+    let priceColor 
+    if(listPrice.amount > 150) priceColor = 'red'
+    else if(listPrice.amount < 20) priceColor = 'green'
+    else priceColor = ''
+
     console.log(Difficulity);
 
 
     return (
         <section className="book-details">
             <h1>Title: {title}</h1>
-            <h2>Price: {listPrice.amount} {listPrice.currencyCode}</h2>
+            <h2>Price: <span className={`${priceColor}`}>{listPrice.amount}</span> {listPrice.currencyCode}</h2>
             <h3>Difficulty: {Difficulity}</h3>
             <p>Description: {description}</p>
             <img src={thumbnail} alt={`${title} thumbnail`} />

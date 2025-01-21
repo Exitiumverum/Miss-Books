@@ -131,3 +131,11 @@ button:hover{
     text-decoration: none;
     color: white;
 }
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
